@@ -20,14 +20,13 @@ for name,i in arrays.items():
     i = np.around(i, 4)
     new_list[name]=[label,name]+i[0].tolist()
 
-# PHY=pd.read_csv(f'./data/many/{filename}PHY.csv')
-# PHY_arr=np.array(PHY)
-# for x in PHY_arr:
-#     name=x[0]
-#     label = name[-1]
-#     name = name[:name.index('-')]
-#
-#     new_list[name]=new_list[name]+x[1:].tolist()
+PHY=pd.read_csv(f'./data/many/{filename}PHY.csv')
+PHY_arr=np.array(PHY)
+for x in PHY_arr:
+    name=x[0]
+    label = name[-1]
+    name = name[:name.index('-')]
+    new_list[name]=new_list[name]+x[1:].tolist()
 
 
 
